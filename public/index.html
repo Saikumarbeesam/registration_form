@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration form</title>
+    <style>
+        .parent{
+            display: flex;
+        }
+        body{
+   border: 0;
+    margin: 0;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(5, 72, 5, 0.788);
+}
+.page {
+    background-color: #3d2d2d6b;
+    margin: 0;
+    padding: 5% 5% 5% 5%;
+       
+}
+.parent {
+    width: 100%;
+    height: 40%;
+    
+}
+.container {
+    height: 40%;
+    width: 40%;
+    margin: 0;
+    
+}
+.child {
+    width: 60%;
+    height: 40%;
+    margin: 0;
+    padding-top: 10%;
+    
+    font-size: 1.5rem;
+
+}
+.sec1, .sec2, .sec3 {
+    display: flex; 
+}
+.sec1, .two {
+    padding: 0px 8px; 
+    
+}
+.three, .four {
+    font-size: 1.2rem;
+
+}
+.sec2, .five{
+    padding: 0px 20px;
+}
+fieldset {
+    border: none;
+    padding: 2rem 0;
+}
+legend {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+option {
+    color: aquamarine;
+    background-color: #3b3b4f;
+}
+select, label {
+    font-size: 1rem;
+}
+
+.section {
+    background-color: rgba(0, 0, 0, 0.671);
+    color: whitesmoke;
+    padding: 2% 10% 0% 10%;
+}
+input[type="submit"] {
+    display: block;
+    width: 40%;
+    height: 3.2rem;
+    font-size: 1.8rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    margin: 0.5rem;
+    min-width: 300px;
+}
+form{
+    max-width: 1100px;
+    min-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+        
+    </style>
+</head>
+<body>
+    
+    <div class="page">
+        <section class="parent">
+            <div class="container">
+                <img src="playing piano.png" alt="playing piano" height="70%" width="80%">
+            </div>
+            <div class="child">
+                    <h1>MUSIC SCHOOL<br/>REGISTRATION</h1>
+                    <p>Register to our music school from below</p>
+            </div>
+            
+        </section>
+        <div class="section"> 
+            <form action="/internship" method="POST">
+            <fieldset>
+                <legend>Name</legend>
+                <div class="sec1">
+                    <label for="firstname"><input type="text" name="firstname" id="firstname" required><br>Firstname</label>
+                    <div class="two">
+                        <label for="lastname"><input type="text" name="lastname" id="lastname" required><br>Lastname</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Gender</legend>
+                <label for="male"><input type="radio" id="male" name="gender" value="male" checked>male</label>
+                <label for="female"><input type="radio" id="female" name="gender" value="female">female</label>
+            </fieldset>
+            <fieldset>
+                <legend>Birth Date</legend>
+                <label for="bithdate"><input type="date" name="birth-date" id="birth-date" required><br>Date of Birth</label>
+            </fieldset>
+            <fieldset>
+                <legend>Choice of Instrument</legend>
+                <select name="instrument" id="instrument">
+                    <option value="">Please select</option>
+                    <option value="Violin">Violin</option>
+                    <option value="Guitar">Guitar</option>
+                    <option value="Drums">Drums</option>
+                    <option value="Bass">Bass</option>
+                    <option value="Vocals">Vocals</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Pick Days for Classes</legend>
+                <div class="sec3">
+                    <div class="three">
+                        <label for="monday"><input type="checkbox" id="monday" name="days[]" value="monday"> Monday</label>
+                        <br>
+                        <label for="wednesday"><input type="checkbox" id="wednesday" name="days[]"  value="wednesday"> Wednesday</label>
+                        <br>
+                        <label for="friday"><input type="checkbox" id="friday" name="days[]"  value="friday"> Friday</label>
+                        <br>
+                        <label for="sunday"><input type="checkbox" id="sunday" name="days[]"  value="sunday"> Sunday</label>
+                    </div>
+                    <div class="four">
+                        <label for="tuesday"><input type="checkbox" id="tuesday"  name="days[]" value="tuesday"> Tuesday</label>
+                        <br>
+                        <label for="thursday"><input type="checkbox" id="thursday" name="days[]"  value="thursday"> Thursday</label>
+                        <br>
+                        <label for="saturday"><input type="checkbox" id="saturday" name="days[]"  value="saturday"> Saturday</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Start Date & Time</legend>
+                <div class="sec2">
+                    <label for="date"><input type="date" name="date" id="date" value=""><br>Date</label>
+                
+                    <div class="five">
+                    <label for="time"><input type="time" name="time" id="time" value="" required><br>Time</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Comments</legend>
+                <label for="comments"><textarea name="comments" id="comments" cols="100" rows="15"></textarea></label>
+            </fieldset>
+            <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
